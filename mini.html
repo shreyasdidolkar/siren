@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Toggle Door</title>
+    <style>
+    body{
+        background-color: #A5B9E3;
+    }
+
+
+    .heading{
+        text-align: center;
+        color: black;
+    }
+    .siren-container{
+     border: solid 1px black;
+        width: fit-content;
+        margin: 20px auto;
+          border-radius: 10px;
+       background-color: white;
+    }
+
+    .main-img{
+    margin: 20px;
+    height: 300px;
+    }
+    .btn{
+        border: none;
+        min-width: 70px;
+        border-radius: 40px;
+        padding: 4px 20px;
+        cursor: pointer;
+
+    }
+    .btn-start{
+        background-color:  rgb(124, 184, 6);
+    }
+    .btn-stop{
+        background-color: red;
+     
+    }
+    .btn-container{
+         display: flex;
+         justify-content: space-around;
+         margin: 10px auto;
+
+    }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Siren Toggler</h1>
+    <div class="siren-container">
+    <img src="./start.jpg" height="200px" class="main-img" id="siren"/>
+    <div class="btn-container">
+         <button class="btn btn-stop" onclick="sirenOff()" >stop</button>
+        <button class="btn btn-start" onclick="sirenOn()">start</button>
+       
+    </div>
+    </div>
+<script>
+     const sirenElement= document.getElementById("siren");
+
+    function sirenOn(){
+     sirenElement.src = "start.jpg"
+    }
+
+      function sirenOff(){
+    sirenElement.src = "stop.png"
+    }
+
+</script>
+</body>
+</html>
